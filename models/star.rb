@@ -32,4 +32,10 @@ attr_accessor :first_name, :last_name
     SqlRunner.run(sql)
   end
 
+  def self.all()
+    sql = "SELECT * FROM stars"
+    stars_hashes = SqlRunner.run(sql)
+    return Star.map_items(stars_hashes)
+  end
+
 end

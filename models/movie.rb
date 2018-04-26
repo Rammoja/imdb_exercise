@@ -33,6 +33,10 @@ class Movie
     SqlRunner.run(sql)
   end
 
-
+  def self.all()
+    sql = "SELECT * FROM movies"
+    movies_hashes = SqlRunner.run(sql)
+    return Movie.map_items(movies_hashes)
+  end
 
 end
