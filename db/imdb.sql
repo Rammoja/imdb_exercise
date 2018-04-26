@@ -2,7 +2,6 @@ DROP TABLE castings;
 DROP TABLE movies;
 DROP TABLE stars;
 
-
 CREATE TABLE movies(
   id SERIAL4 PRIMARY KEY,
   title VARCHAR(255),
